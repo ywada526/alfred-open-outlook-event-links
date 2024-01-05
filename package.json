@@ -1,0 +1,43 @@
+{
+  "name": "alfred-open-outlook-event-links",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Alfred workflow to open Outlook event links",
+  "author": {
+    "name": "Yuta Wada",
+    "email": "ywada526@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ywada526/alfred-open-outlook-event-links",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ywada526/alfred-open-outlook-event-links.git"
+  },
+  "files": [
+    "dist",
+    "info.plist"
+  ],
+  "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "prepublish": "npm run build",
+    "build": "rm -rf dist && tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@azure/msal-node": "^2.6.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "alfy": "^2.0.0",
+    "jwt-decode": "^4.0.0",
+    "open": "^10.0.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.1",
+    "@microsoft/microsoft-graph-types": "^2.40.0",
+    "eslint": "^8.56.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
