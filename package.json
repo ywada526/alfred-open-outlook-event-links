@@ -1,7 +1,7 @@
 {
   "name": "alfred-open-outlook-event-links",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Alfred workflow to open Outlook event links",
   "author": {
     "name": "Yuta Wada",
