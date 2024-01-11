@@ -1,6 +1,5 @@
 import {
   InteractionRequiredAuthError,
-  LogLevel,
   PublicClientApplication,
 } from '@azure/msal-node'
 import type {
@@ -20,15 +19,6 @@ const msalConfig: Configuration = {
   },
   cache: {
     cachePlugin,
-  },
-  system: {
-    loggerOptions: {
-      loggerCallback(_, message) {
-        console.log(message)
-      },
-      piiLoggingEnabled: false,
-      logLevel: LogLevel.Verbose,
-    },
   },
 }
 
