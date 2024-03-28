@@ -1,7 +1,8 @@
 import process from 'node:process'
 import alfy from 'alfy'
-import { getGraphClient, resources } from '../graphClient.js'
+import { GraphClient } from '../graphClient.js'
 import { accessTokenProvider } from '../auth/accessTokenProvider.js'
+import { alfyCacheClient } from '../alfyCacheClient.js'
 
 const result = await accessTokenProvider.verifyAccessToken()
 if (!result.valid) {
@@ -15,19 +16,8 @@ if (!result.valid) {
   process.exit(1)
 }
 
-const graphClient = getGraphClient(accessTokenProvider.getAccessToken)
-
-const now = new Date()
-const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59)
-
-const res = await graphClient
-  .api(resources.calendarView.endpoint)
-  .header('Prefer', 'outlook.timezone="Asia/Tokyo"')
-  .query({ startDateTime: now.toISOString(), endDateTime: endOfToday.toISOString() })
-  .select('subject,organizer,start,end,location,body')
-  .orderby('isAllDay,start/dateTime')
-  .top(50)
-  .get()
+const graphClient = new GraphClient(accessTokenProvider.getAccessToken)
+const res = alfyCacheClient.calendarViewResponse.get() ?? await graphClient.getCalendarView()
 
 const items = res.value.map((event: any) => {
   const urlRegex = /https?:\/\/[\w!?/+\-_~;.,*&@#$%()'[\]]+/g

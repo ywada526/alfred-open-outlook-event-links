@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8C46C915-4508-4021-B1F6-F6011AB5F2F6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AA7A7717-A9A4-49A1-A5F0-7FA365E7CE12</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>BE445CD6-DA30-43A4-B0E7-9609CEE33461</key>
 		<array>
 			<dict>
@@ -131,6 +144,55 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ool</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node dist/entrypoints/updateCalendarViewResponseCache.js</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Update Calendar View Response Cache</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3063272C-B7FC-43D9-AC0C-890B10D10E2F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -171,6 +233,29 @@
 			<string>1217D517-1403-4578-8F82-AC5EEF55F966</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node dist/entrypoints/updateCalendarViewResponseCache.js</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AA7A7717-A9A4-49A1-A5F0-7FA365E7CE12</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -226,7 +311,7 @@
 			<key>xpos</key>
 			<real>60</real>
 			<key>ypos</key>
-			<real>160</real>
+			<real>40</real>
 		</dict>
 		<key>1217D517-1403-4578-8F82-AC5EEF55F966</key>
 		<dict>
@@ -234,6 +319,13 @@
 			<real>60</real>
 			<key>ypos</key>
 			<real>315</real>
+		</dict>
+		<key>3063272C-B7FC-43D9-AC0C-890B10D10E2F</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>160</real>
 		</dict>
 		<key>751F88ED-0D10-4C40-9B5F-A3E4A9189C61</key>
 		<dict>
@@ -252,9 +344,16 @@
 		<key>914AFBDF-4545-496C-AD45-9AD1495016B6</key>
 		<dict>
 			<key>xpos</key>
-			<real>340</real>
+			<real>335</real>
 			<key>ypos</key>
-			<real>160</real>
+			<real>40</real>
+		</dict>
+		<key>AA7A7717-A9A4-49A1-A5F0-7FA365E7CE12</key>
+		<dict>
+			<key>xpos</key>
+			<real>595</real>
+			<key>ypos</key>
+			<real>315</real>
 		</dict>
 		<key>BE445CD6-DA30-43A4-B0E7-9609CEE33461</key>
 		<dict>
@@ -269,7 +368,7 @@
 	<key>variables</key>
 	<dict>
 		<key>USE_ACCESS_TOKEN_DIRECTLY</key>
-		<string></string>
+		<string>1</string>
 	</dict>
 	<key>version</key>
 	<string></string>

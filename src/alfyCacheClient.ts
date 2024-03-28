@@ -16,4 +16,9 @@ export const alfyCacheClient = {
     set: (value: string) => alfy.cache.set('access-token', value),
     delete: () => alfy.cache.delete('access-token'),
   },
+  calendarViewResponse: {
+    get: () => alfy.cache.get('calendarViewResponse') as any,
+    set: (value: any) => alfy.cache.set('calendarViewResponse', value),
+    delete: () => alfy.cache.delete('calendarViewResponse'),
+  },
 }
